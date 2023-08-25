@@ -1,0 +1,260 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: 'Noto Sans', sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+.main_section{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navbar Section */
+nav{
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+nav .logo{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+nav ul li a{
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    font-weight: 450;
+    transition: .5s ease-out;
+}
+nav ul li a.active{
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #eeeeee;
+}
+nav ul li a:hover{
+    color: #eeeeee;
+}
+
+
+
+/* Hero Carousel Section */
+.hero_section{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+
+.hero_section .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Video Section */
+.hero_section .carousel_video{
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+
+/* For Responsiveness */
+@media (min-aspect-ratio: 16/9) {
+    .video_section .video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video_section .video{
+        width: auto;
+        height: 100%;
+    }
+}
+/*  */
+
+
+/* Content Section */
+.hero_content_section{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.15));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 80px;
+}
+.hero_data{
+    max-width: 55%;
+    height: auto;
+    /* background: rgba(0, 0, 0, 0.5); */
+    backdrop-filter: blur(3px);
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+}
+.hero_data .hero_tag{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fffc;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+.hero_tag .circle{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fffc;
+}
+.hero_title{
+    font-size: 4.0rem;
+    font-weight: bolder;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.hero_desc{
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #9f9f9f;
+    line-height: 1.5rem;
+    margin-bottom: 2.0rem;
+}
+.explore_btn{
+    width: 150px;
+    height: 43px;
+    background: #00A36C;
+    outline: none;
+    border: 2px solid rgb(0, 163, 108);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    color: #fffe;
+    cursor: pointer;
+    transition: .5s ease-out;
+}
+.explore_btn:hover{
+    background: transparent;
+    border: 2px solid rgb(0, 163, 108);
+    color: #00A36C;
+    /* color: #fffe; */
+}
+
+
+
+
+
+
+/* Hero Carousel Indicator Section */
+.hero_carousel_indicator{
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    width: 50%;
+    height: 200px;
+    float: right;
+}
+
+
+.hero_carousel_indicator .swiper-slide {
+    filter: brightness(50%);
+}
+.hero_carousel_indicator .swiper-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1.2rem;
+    overflow: auto;
+    /* background: #000a; */
+    /* background: rgba(0, 0, 0, 0.15);
+    padding: 10px 0 5px 0;
+    border-radius: 6px; */
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    filter: brightness(150%);
+}
+
+.swiper-slide img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.video_section{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+
+/*  */
+
+
+
+
+
+
+
+
+
+/*  */
